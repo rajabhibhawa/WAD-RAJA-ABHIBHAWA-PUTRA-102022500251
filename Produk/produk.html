@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Form Produk</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="header">
+  <h1>UMKM Toko Online - Modul Katalog Produk</h1>
+</div>
+
+<div class="container">
+  <h2>Form Tambah / Edit Produk</h2>
+
+  <form>
+    <div class="form-grid">
+      <div class="field full">
+        <label for="nama">Nama Produk</label>
+        <input id="nama" type="text" placeholder="Contoh: Laptop">
+      </div>
+
+      <div class="field">
+        <label for="sku">SKU</label>
+        <input id="sku" type="text" placeholder="KTS-001">
+      </div>
+
+      <div class="field">
+        <label for="merek">Merek</label>
+        <select id="merek">
+          <option>Brand A</option>
+          <option>Brand B</option>
+          <option>Brand C</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="kategori">Kategori</label>
+        <select id="kategori">
+          <option>Fashion</option>
+          <option>Elektronik</option>
+          <option>Makanan</option>
+          <option>Kerajinan</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="berat">Berat (gram)</label>
+        <input id="berat" name="berat" type="number" min="0" step="1" inputmode="numeric"
+       placeholder="200" required
+       onkeydown="if (['-','+','e','E','.',','].includes(event.key)) event.preventDefault();"
+       oninput="if (this.value < 0) this.value = 0;">
+      </div>
+
+      <div class="field">
+        <label for="warna">Warna</label>
+        <input id="warna" type="text" placeholder="Hitam">
+      </div>
+
+      <div class="field">
+        <label for="ukuran">Ukuran</label>
+        <select id="ukuran">
+          <option>S</option>
+          <option>M</option>
+          <option>L</option>
+          <option>XL</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="stok">Stok Varian</label>
+        <input id="stok" name="stok" type="number" min="0" step="1" inputmode="numeric"
+       placeholder="40" required
+       onkeydown="if (['-','+','e','E','.',','].includes(event.key)) event.preventDefault();"
+       oninput="if (this.value < 0) this.value = 0;">
+      </div>
+
+      <div class="field">
+        <label for="harga">Harga Jual (Rp)</label>
+        <input id="harga" name="harga" type="number" min="1" step="1" inputmode="numeric"
+       placeholder="75000" required
+       onkeydown="if (['-','+','e','E','.',','].includes(event.key)) event.preventDefault();"
+       oninput="if (this.value < 0) this.value = 0;">
+      </div>
+
+      <div class="field full">
+        <label for="foto">Foto Produk</label>
+        <input id="foto" type="file">
+      </div>
+    </div>
+
+    <div class="form-actions">
+      <a href="index.html" class="btn-secondary">Batal</a>
+      <button type="submit" class="btn">Simpan</button>
+    </div>
+  </form>
+</div>
+
+</body>
+</html>
